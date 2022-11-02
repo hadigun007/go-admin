@@ -5,7 +5,7 @@ import (
 	"github.com/hadigun007/go-admin/modules/auth"
 	"github.com/hadigun007/go-admin/modules/config"
 	"github.com/hadigun007/go-admin/modules/utils"
-	"github.com/hadigun007/go-admin/plugins/admin/modules/table/response"
+	"github.com/hadigun007/go-admin/plugins/admin/modules/response"
 	"github.com/hadigun007/go-admin/template"
 )
 
