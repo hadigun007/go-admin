@@ -15,13 +15,16 @@ import (
 	"strings"
 	"sync"
 
+	"github.com/hadigun007/go-admin/modules/language"
+	"github.com/hadigun007/go-admin/template/icon"
+	"github.com/hadigun007/go-admin/template/types/action"
+
 	"github.com/hadigun007/go-admin/adapter"
 	"github.com/hadigun007/go-admin/context"
 	"github.com/hadigun007/go-admin/modules/auth"
 	"github.com/hadigun007/go-admin/modules/config"
 	"github.com/hadigun007/go-admin/modules/db"
 	"github.com/hadigun007/go-admin/modules/errors"
-	"github.com/hadigun007/go-admin/modules/language"
 	"github.com/hadigun007/go-admin/modules/logger"
 	"github.com/hadigun007/go-admin/modules/menu"
 	"github.com/hadigun007/go-admin/modules/service"
@@ -30,12 +33,10 @@ import (
 	"github.com/hadigun007/go-admin/plugins"
 	"github.com/hadigun007/go-admin/plugins/admin"
 	"github.com/hadigun007/go-admin/plugins/admin/models"
+	"github.com/hadigun007/go-admin/plugins/admin/modules/response"
 	"github.com/hadigun007/go-admin/plugins/admin/modules/table"
-	"github.com/hadigun007/go-admin/plugins/admin/modules/table/response"
 	"github.com/hadigun007/go-admin/template"
-	"github.com/hadigun007/go-admin/template/icon"
 	"github.com/hadigun007/go-admin/template/types"
-	"github.com/hadigun007/go-admin/template/types/action"
 )
 
 // Engine is the core component of goAdmin. It has two attributes.
