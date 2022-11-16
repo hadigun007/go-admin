@@ -279,21 +279,6 @@ func GetDashBoard(ctx *context.Context) (types.Panel, error) {
 
 	row3 := components.Row().SetContent(col1 + col2 + col3 + col4).GetContent()
 
-	/**************************
-	 * Pie Chart
-	/**************************/
-
-	pie := chartjs.Pie().
-		SetHeight(170).
-		SetLabels([]string{"Navigator", "Opera", "Safari", "FireFox", "IE", "Chrome"}).
-		SetID("pieChart").
-		AddDataSet("Chrome").
-		DSData([]float64{100, 300, 600, 400, 500, 700}).
-		DSBackgroundColor([]chartjs.Color{
-			"rgb(255, 205, 86)", "rgb(54, 162, 235)", "rgb(255, 99, 132)", "rgb(255, 205, 86)", "rgb(54, 162, 235)", "rgb(255, 99, 132)",
-		}).
-		GetContent()
-
 	legend := chart_legend.New().SetData([]map[string]string{
 		{
 			"label": " Chrome",
@@ -319,7 +304,6 @@ func GetDashBoard(ctx *context.Context) (types.Panel, error) {
 	boxDanger := components.Box().SetTheme("danger").WithHeadBorder().SetHeader("Browser Usage").
 		SetBody(components.Row().
 			SetContent(colComp.SetSize(types.SizeMD(8)).
-				SetContent(pie).
 				GetContent() + colComp.SetSize(types.SizeMD(4)).
 				SetContent(legend).
 				GetContent()).GetContent()).

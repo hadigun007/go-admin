@@ -33,12 +33,12 @@ func (admin *Admin) InitPlugin(services service.List) {
 	c := config.GetService(services.Get("config"))
 	st := table.NewSystemTable(admin.Conn, c)
 	genList := table.GeneratorList{
-		"manager":        st.GetManagerTable,
-		"permission":     st.GetPermissionTable,
-		"roles":          st.GetRolesTable,
-		"op":             st.GetOpTable,
-		"menu":           st.GetMenuTable,
-		"normal_manager": st.GetNormalManagerTable,
+		"manager": st.GetManagerTable,
+		// "permission":     st.GetPermissionTable,
+		// "roles":          st.GetRolesTable,
+		// "op":             st.GetOpTable,
+		// "menu":           st.GetMenuTable,
+		// "normal_manager": st.GetNormalManagerTable,
 	}
 	if c.IsAllowConfigModification() {
 		genList.Add("site", st.GetSiteTable)
